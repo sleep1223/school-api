@@ -13,14 +13,13 @@ import unittest
 
 
 class TestStudent(unittest.TestCase):
-
     conf = {
         'code': 'gdst',
         'name': '广东科技学院',
         'lan_url': 'http://172.16.1.8',  # 内网地址
         'login_url_path': '/default4.aspx',  # 登录地址
-        'exist_verify': False,           # 是否存在验证码
-        'priority_proxy': True,        # 是否优先使用代理
+        'exist_verify': False,  # 是否存在验证码
+        'priority_proxy': True,  # 是否优先使用代理
         'proxies': {"http": "http://xxxx:xxxx@127.0.0.1:1080/", }  # 代理
     }
 

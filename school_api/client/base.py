@@ -52,13 +52,13 @@ class BaseUserClient(LoginManagement):
             self.switch_proxy(True)
 
     def _request(self, url_suffix, **kwargs):
-
         url = '{base}{url_token}{url_suffix}'.format(
             base=self.base_url,
             url_suffix=url_suffix,
             url_token=self.url_token
         )
         kwargs['timeout'] = kwargs.get('timeout', self.school.timeout)
+        # print('_request', url, kwargs)
         res = self._http.request(
             url=url,
             proxies=self._proxy,

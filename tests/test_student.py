@@ -13,24 +13,13 @@ import unittest
 
 
 class TestStudent(unittest.TestCase):
-
     conf = {
-        'code': 'gdst',
-        'name': '广东科技学院',
-        'lan_url': 'http://172.16.1.8',  # 内网地址
-        'login_url_path': '/default4.aspx',  # 登录地址
-        'exist_verify': False,           # 是否存在验证码
-        # 'priority_proxy': True,        # 是否优先使用代理
-        # 'proxies': {"http": "http://xxxx:xxxx@xxxx.xxxx.xxxx:xxxx/", }  # 代理
+        'name': '湖北师范大学文理学院',
+        'exist_verify': True
     }
 
-    STUDENT_ACCOUNT = os.getenv('GDST_STUDENT_ACCOUNT', '')
-    STUDENT_PASSWD = os.getenv('GDST_STUDENT_PASSWD', '')
-    GdstApi = SchoolClient('http://61.142.33.204', **conf)
-    student = GdstApi.user_login(STUDENT_ACCOUNT, 'error_pwd', timeout=3)
-    student = GdstApi.user_login(STUDENT_ACCOUNT, STUDENT_PASSWD, timeout=3)
-    # 第二次 触发会话登录
-    student = GdstApi.user_login(STUDENT_ACCOUNT, STUDENT_PASSWD, timeout=3)
+    GdstApi = SchoolClient('http://221.233.125.126:8096', **conf)
+    student = GdstApi.user_login('2021415210101', 'hsyqwe123', timeout=3)
 
     def setUp(self):
         print('正在执行\033[1;35m %s \033[0m函数。' % self._testMethodName)

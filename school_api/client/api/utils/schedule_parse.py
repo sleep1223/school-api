@@ -190,10 +190,9 @@ class ScheduleParse(BaseScheduleParse):
                     if last_schedule and next_schedule:
                         # 课程名 上课地点 上课时间 教师名
                         if last_schedule[0] == next_schedule[0] and \
-                            last_schedule[1] == next_schedule[1] and \
-                                last_schedule[2] == next_schedule[2] and\
+                                last_schedule[1] == next_schedule[1] and \
+                                last_schedule[2] == next_schedule[2] and \
                                 last_schedule[3] == next_schedule[3]:
-
                             day_schedule[i][last_i][4] += day_schedule[i + 1][next_i][4]
                             day_schedule[i + 1][next_i] = []
 

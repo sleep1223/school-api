@@ -4,7 +4,6 @@ from __future__ import absolute_import, unicode_literals
 from school_api import SchoolClient
 from school_api.exceptions import SchoolException, LoginException, IdentityException
 
-
 school = SchoolClient('http://61.142.33.204', use_ex_handle=False)
 
 
@@ -31,6 +30,7 @@ def service_resp():
                 return data
 
         return warpper
+
     return decorator
 
 

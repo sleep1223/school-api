@@ -26,6 +26,7 @@ class LoginFail():
     def __getattr__(self, name):
         def func(*args, **kwargs):
             return {'error': self.tip}
+
         return func
 
     def __nonzero__(self):
@@ -47,6 +48,7 @@ def error_handle(func):
                 result = {'error': str(reqe)}
 
         return result
+
     return wrapper
 
 
@@ -62,6 +64,7 @@ class ApiPermissions():
             if func_object.user.user_type not in self.permission_list:
                 raise PermissionException(func_object.school.code, '暂无该接口权限')
             return func(*args, **kwargs)
+
         return wrapper
 
 
@@ -72,9 +75,9 @@ def get_time_list(class_time):
     for index, times in enumerate(class_time):
         if index % 2 == 0:
             time_list[1].append(time_text.format(times[0], times[1]))
-            time_list[2].append(time_text.format(times[0], class_time[index+1][1]))
+            time_list[2].append(time_text.format(times[0], class_time[index + 1][1]))
 
             if index < 8:
-                time_list[3].append(time_text.format(times[0], class_time[index+2][1]))
-                time_list[4].append(time_text.format(times[0], class_time[index+3][1]))
+                time_list[3].append(time_text.format(times[0], class_time[index + 2][1]))
+                time_list[4].append(time_text.format(times[0], class_time[index + 3][1]))
     return time_list

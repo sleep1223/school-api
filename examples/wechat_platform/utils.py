@@ -51,7 +51,7 @@ def assemble_score(score_year, score_term, score_data):
             break
         print(c)
         articles.append({
-            'title': "课程：%s\n学分：%s 成绩：%s" % (c['lesson_name'], c['credit'],  c['score']),
+            'title': "课程：%s\n学分：%s 成绩：%s" % (c['lesson_name'], c['credit'], c['score']),
         })
     articles.append({
         'title': '点击这里：查看完整成绩',

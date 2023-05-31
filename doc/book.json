@@ -1,17 +1,19 @@
 {
-    "title": "School-api",
-    "language": "zh-hans",
-    "links": {
-        "gitbook": false
+  "title": "School-api",
+  "language": "zh-hans",
+  "links": {
+    "gitbook": false
+  },
+  "plugins": [
+    "github"
+  ],
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/dairoot/school-api"
     },
-    "plugins": ["github"],
-    "pluginsConfig": {
-        "github": {
-            "url": "https://github.com/dairoot/school-api"
-        },
-        "sharing": {
-            "twitter": false,
-            "facebook": false
-        }
+    "sharing": {
+      "twitter": false,
+      "facebook": false
     }
+  }
 }

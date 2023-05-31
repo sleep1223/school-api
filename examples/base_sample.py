@@ -1,20 +1,18 @@
 from school_api import SchoolClient
 
-
 conf = {
     'name': '广东科技学院',
     'code': 'gdst',
-    'exist_verify': True,          # 是否存在验证码
+    'exist_verify': True,  # 是否存在验证码
     'login_url': '/default2.aspx',
     'lan_url': 'http://172.16.1.8',  # 内网地址
-    'priority_proxy': False,             # 是否优先使用代理
-    'url_path_list': None,           # 教务系统链接
+    'priority_proxy': False,  # 是否优先使用代理
+    'url_path_list': None,  # 教务系统链接
     # 'proxies': {"http": "http://XXXX:XXXX@XXXX:3120/", }  # 代理存在时，请求失败则会切换成代理
 }
 
 # 先实例化一个学校，再实例化用户
 GdstApi = SchoolClient('http://61.142.33.204', **conf)  # 注册一个学校A
-
 
 client_a = GdstApi.user_login('user', 'password', timeout=2)  # 学校A实例化一个学生a
 client_b = GdstApi.user_login('user', 'password', user_type=1, timeout=2)  # 学校A实例化一个教师b
@@ -45,7 +43,6 @@ info_data = client_a.get_info(timeout=5)
 # 部门教师账号 获取学生班级课表
 schedule_data = client_c.get_schedule(class_name='15软件本科2班', timeout=5)
 print(schedule_data)
-
 
 # 场地课表遍历
 for schedule_data in client_c.get_place_schedule(campus_list=[u"本部"]):

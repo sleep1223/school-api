@@ -16,7 +16,7 @@ class TestBmTeacher(unittest.TestCase):
     BM_TEACHER_ACCOUNT = os.getenv('GDST_BM_TEACHER_ACCOUNT', '')
     BM_TEACHER_PASSWD = os.getenv('GDST_BM_TEACHER_PASSWD', '')
     GdstApi = SchoolClient('http://61.142.33.204')
-    bm_teacher = GdstApi.user_login(BM_TEACHER_ACCOUNT, BM_TEACHER_PASSWD,  user_type=2, timeout=3)
+    bm_teacher = GdstApi.user_login(BM_TEACHER_ACCOUNT, BM_TEACHER_PASSWD, user_type=2, timeout=3)
 
     def setUp(self):
         print('正在执行\033[1;35m %s \033[0m函数。' % self._testMethodName)

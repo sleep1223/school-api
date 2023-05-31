@@ -9,7 +9,6 @@ from wechatpy.replies import create_reply, EmptyReply, TextReply
 from utils import assemble_schedule, assemble_score
 from school import School
 
-
 app = Flask(__name__)
 app.config['WECHAT_APPID'] = os.getenv('WECHAT_APPID', '')
 app.config['WECHAT_SECRET'] = os.getenv('WECHAT_SECRET', '')

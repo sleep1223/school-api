@@ -13,7 +13,6 @@ import unittest
 
 
 class TestStudent(unittest.TestCase):
-
     STUDENT_ACCOUNT = os.getenv('GDOU_STUDENT_ACCOUNT', '')
     STUDENT_PASSWD = os.getenv('GDOU_STUDENT_PASSWD', '')
     GdouApi = SchoolClient('http://210.38.137.126:8016')

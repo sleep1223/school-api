@@ -27,7 +27,7 @@ class BaseSchoolApi(object):
         return self._client.update_url_token(url_token)
 
     @property
-    def school_code(self):
+    def code(self):
         return self._client.school.code
 
     @property

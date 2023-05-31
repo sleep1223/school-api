@@ -10,7 +10,6 @@ cur_path = os.path.abspath(__file__)
 parent = os.path.dirname
 sys.path.append(parent(parent(cur_path)))
 
-
 from school_api import SchoolClient
 from school_api.session.redisstorage import RedisStorage
 
@@ -21,7 +20,7 @@ class TestStudent(unittest.TestCase):
     conf = {
         'name': '广东科技学院',
         'code': 'gdst',
-        'login_url_path': '/default2.aspx', # 登录地址
+        'login_url_path': '/default2.aspx',  # 登录地址
         # 'exist_verify': False,            # 是否存在验证码
         'session': session,
     }

@@ -17,7 +17,8 @@ URL_PATH_LIST = [
         "INFO_URL": "/xsgrxx.aspx?gnmkdm=N121501&xh=",
         "SCHEDULE_URL": [
             "/xskbcx.aspx?gnmkdm=N121603&xh=",
-            "/tjkbcx.aspx?gnmkdm=N121601&xh="
+            "/tjkbcx.aspx?gnmkdm=N121601&xh=",
+            "/pyjh.aspx?gnmkdm=N123104&xh="
         ]
     },
     {
